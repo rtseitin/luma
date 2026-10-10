@@ -1,0 +1,4 @@
+Block <html> at (0,0) size 400x54
+  Block <body> at (0,10) size 400x34
+    Block <div#a> at (17,17) size 366x20
+      Block <div#b> at (17,17) size 366x20

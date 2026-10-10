@@ -1,4 +1,34 @@
-[package]
-name = "luma"
+[workspace]
+resolver = "3"
+members = ["crates/*"]
+default-members = ["crates/luma"]
+
+[workspace.package]
 version = "0.1.0"
 edition = "2024"
+license = "MIT"
+repository = "https://github.com/rtseitin/luma"
+
+[workspace.dependencies]
+# Internal crates. Members depend on these with `luma-dom.workspace = true`.
+luma-dom = { path = "crates/dom" }
+luma-html = { path = "crates/html" }
+luma-css = { path = "crates/css" }
+luma-style = { path = "crates/style" }
+luma-loader = { path = "crates/loader" }
+luma-text = { path = "crates/text" }
+luma-layout = { path = "crates/layout" }
+
+url = "2"
+clap = { version = "4", features = ["derive"] }
+ttf-parser = "0.25"
+rustybuzz = "0.20"
+fontdb = "0.24"
+tiny-skia = { version = "0.12", default-features = false, features = ["std", "simd"] }
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+missing_docs = "warn"
+
+[workspace.lints.clippy]
+all = "warn"

@@ -1,0 +1,12 @@
+Block <html> at (0,0) size 400x40
+  Block <body> at (0,0) size 400x40
+    Block <ul> at (40,0) size 360x20
+      Block <li#a> at (40,0) size 360x20
+        Marker "• " at (25.48,0.69) size 14.52x18.62 baseline=15.54
+        Line at (40,0) size 360x20
+          Text "one" at (40,0.69) size 29.77x18.62 baseline=15.54
+    Block <ol> at (40,20) size 360x20
+      Block <li#b> at (40,20) size 360x20
+        Marker "1. " at (19.65,20.69) size 20.35x18.62 baseline=35.54
+        Line at (40,20) size 360x20
+          Text "two" at (40,20.69) size 29.15x18.62 baseline=35.54

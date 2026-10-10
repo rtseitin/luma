@@ -1,0 +1,6 @@
+Block <html> at (0,0) size 400x40
+  Block <body> at (0,0) size 400x40
+    Block <div#half> at (0,0) size 200x10
+    Block <div#centre> at (100,10) size 200x10
+    Block <div#over> at (100,20) size 500x10
+    Block <div#clamp> at (140,30) size 120x10

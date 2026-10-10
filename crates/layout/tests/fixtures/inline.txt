@@ -1,0 +1,10 @@
+Block <html> at (0,0) size 400x20
+  Block <body> at (0,0) size 400x20
+    Block <p#p> at (0,0) size 400x20
+      Line at (0,0) size 400x20
+        Text "aa " at (0,0.69) size 28.9x18.62 baseline=15.54
+        Inline <b> at (28.9,0.69) size 38.53x18.62
+          Text "bold" at (28.9,0.69) size 38.53x18.62 baseline=15.54
+        Text " " at (67.43,0.69) size 9.63x18.62 baseline=15.54
+        Inline <i> at (77.06,0.69) size 57.8x18.62
+          Text "italic" at (77.06,0.69) size 57.8x18.62 baseline=15.54

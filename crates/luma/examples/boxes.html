@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Boxes</title>
+  <style>
+    body { margin: 16px; background-color: white; }
+    .outer { background-color: #f4d35e; padding: 20px; border: 4px solid #0d3b66; }
+    .middle { background-color: #ee964b; margin: 10px; padding: 10px 5%; }
+    .inner { background-color: #f95738; height: 40px; }
+    .centred { width: 200px; margin: 20px auto; background-color: #0d3b66; height: 30px; }
+    .half { width: 50%; background-color: #faf0ca; height: 20px; }
+    .clamped { width: 90%; max-width: 300px; min-height: 25px; background-color: #a3cef1; }
+
+    .sibling-a { margin-bottom: 20px; background-color: #ccc; }
+    .sibling-b { margin-top: 10px; background-color: #999; }
+    .negative { margin-top: -5px; background-color: #666; color: white; }
+
+    .borders div { margin: 8px 0; padding: 4px; border-width: 6px; border-color: #0d3b66; }
+    .solid { border-style: solid; }
+    .dashed { border-style: dashed; }
+    .dotted { border-style: dotted; }
+    .double { border-style: double; }
+    .groove { border-style: groove; }
+    .ridge { border-style: ridge; }
+    .inset { border-style: inset; }
+    .outset { border-style: outset; }
+    .mixed { border-style: solid dashed dotted double; border-color: red green blue orange; }
+    .none { border-style: none; }
+  </style>
+</head>
+<body>
+  <div class="outer">
+    <div class="middle">
+      <div class="inner"></div>
+    </div>
+  </div>
+  <div class="centred"></div>
+  <div class="half"></div>
+  <div class="clamped"></div>
+
+  <div class="sibling-a">margin-bottom: 20px</div>
+  <div class="sibling-b">margin-top: 10px (collapses to 20px)</div>
+  <div class="negative">margin-top: -5px</div>
+
+  <div class="borders">
+    <div class="solid">solid</div>
+    <div class="dashed">dashed</div>
+    <div class="dotted">dotted</div>
+    <div class="double">double</div>
+    <div class="groove">groove</div>
+    <div class="ridge">ridge</div>
+    <div class="inset">inset</div>
+    <div class="outset">outset</div>
+    <div class="mixed">mixed</div>
+    <div class="none">none (no border)</div>
+  </div>
+</body>
+</html>

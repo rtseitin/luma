@@ -1,0 +1,18 @@
+Block <html> at (0,0) size 400x140
+  Block <body> at (0,0) size 400x140
+    Block <p#br> at (0,0) size 400x80
+      Line at (0,0) size 400x20
+        Text "a" at (0,0.69) size 9.63x18.62 baseline=15.54
+      Line at (0,20) size 400x20
+        Text "b" at (0,20.69) size 9.63x18.62 baseline=35.54
+      Line at (0,40) size 400x20
+      Line at (0,60) size 400x20
+        Text "c" at (0,60.69) size 9.63x18.62 baseline=75.54
+    Block <pre#pre> at (0,80) size 400x40
+      Line at (0,80) size 400x20
+        Text "a  b" at (0,80.69) size 38.53x18.62 baseline=95.54
+      Line at (0,100) size 400x20
+        Text "  c" at (0,100.69) size 28.9x18.62 baseline=115.54
+    Block <p#nw> at (0,120) size 40x20
+      Line at (0,120) size 40x20
+        Text "aaaa bbbb cccc" at (0,120.69) size 134.86x18.62 baseline=135.54

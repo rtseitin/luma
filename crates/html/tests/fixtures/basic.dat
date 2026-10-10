@@ -1,0 +1,200 @@
+#data
+<!DOCTYPE html><html><head><title>Hi</title></head><body><p>Hello</p></body></html>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|     <title>
+|       "Hi"
+|   <body>
+|     <p>
+|       "Hello"
+
+#data
+<p>Hello
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <p>
+|       "Hello"
+
+#data
+<div id=main class="a b" data-x='y' hidden>text</div>
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <div>
+|       class="a b"
+|       data-x="y"
+|       hidden=""
+|       id="main"
+|       "text"
+
+#data
+<p>a<br>b<img src=x>c<hr>d</p>
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <p>
+|       "a"
+|       <br>
+|       "b"
+|       <img>
+|         src="x"
+|       "c"
+|     <hr>
+|     "d"
+|     <p>
+
+#data
+<p>&lt;a&gt; &amp; &copy &#169; &#xA9; &bogus; &notin;</p>
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <p>
+|       "<a> & © © © &bogus; ∉"
+
+#data
+<script>if (a < b && c) { x = "<p>"; }</script><style>p > a { color: red }</style>
+#errors
+#document
+| <html>
+|   <head>
+|     <script>
+|       "if (a < b && c) { x = "<p>"; }"
+|     <style>
+|       "p > a { color: red }"
+|   <body>
+
+#data
+<title>A &amp; B <b>not bold</b></title><body><textarea>
+<i>raw</i> &lt;</textarea>
+#errors
+#document
+| <html>
+|   <head>
+|     <title>
+|       "A & B <b>not bold</b>"
+|   <body>
+|     <textarea>
+|       "<i>raw</i> <"
+
+#data
+<!-- top --><!DOCTYPE HTML><html><!-- in html --><body>x<!-- in body --></body></html><!-- after -->
+#errors
+#document
+| <!--  top  -->
+| <!DOCTYPE html>
+| <html>
+|   <!--  in html  -->
+|   <head>
+|   <body>
+|     "x"
+|     <!--  in body  -->
+| <!--  after  -->
+
+#data
+<html><head></head>  <link rel=x><body>
+#errors
+#document
+| <html>
+|   <head>
+|     <link>
+|       rel="x"
+|   "  "
+|   <body>
+
+#data
+<pre>
+line1
+line2</pre>
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <pre>
+|       "line1
+line2"
+
+#data
+<a href="?a=1&copy=2&amp;b=3&lt">x</a>
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <a>
+|       href="?a=1&copy=2&b=3<"
+|       "x"
+
+#data
+<ul><li>a</li><li>b</li></ul><ol><li>c</li></ol>
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <ul>
+|       <li>
+|         "a"
+|       <li>
+|         "b"
+|     <ol>
+|       <li>
+|         "c"
+
+#data
+<select><option>a<option>b</select>
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <select>
+|       <option>
+|         "a"
+|       <option>
+|         "b"
+
+#data
+<svg><circle r="1"/><rect/></svg>after
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <svg>
+|       <circle>
+|         r="1"
+|       <rect>
+|     "after"
+
+#data
+<table><tr><td>a<td>b<tr><td>c</table>after
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <table>
+|       <tbody>
+|         <tr>
+|           <td>
+|             "a"
+|           <td>
+|             "b"
+|         <tr>
+|           <td>
+|             "c"
+|     "after"
+

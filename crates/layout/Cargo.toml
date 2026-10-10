@@ -1,0 +1,18 @@
+[package]
+name = "luma-layout"
+description = "Block and inline layout for the Luma browser engine"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+luma-dom.workspace = true
+luma-style.workspace = true
+luma-text.workspace = true
+
+[dev-dependencies]
+luma-html.workspace = true
+
+[lints]
+workspace = true

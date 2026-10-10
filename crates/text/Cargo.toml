@@ -1,0 +1,17 @@
+[package]
+name = "luma-text"
+description = "Font selection, text shaping, and glyph rasterisation for the Luma browser engine"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+luma-style.workspace = true
+ttf-parser.workspace = true
+rustybuzz.workspace = true
+fontdb.workspace = true
+tiny-skia.workspace = true
+
+[lints]
+workspace = true

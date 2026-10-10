@@ -1,0 +1,17 @@
+[package]
+name = "luma-style"
+description = "Selector matching, cascade, and computed styles for the Luma browser engine"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+luma-dom.workspace = true
+luma-css.workspace = true
+
+[dev-dependencies]
+luma-html.workspace = true
+
+[lints]
+workspace = true

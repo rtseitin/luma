@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Text</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    .narrow { width: 240px; }
+    .centre { text-align: center; }
+    .right { text-align: right; }
+    .justify { text-align: justify; }
+    .nowrap { white-space: nowrap; }
+    .pre-line { white-space: pre-line; }
+    .big { font-size: 2em; line-height: 1.2; }
+    .mono { font-family: monospace; }
+  </style>
+</head>
+<body>
+  <h1>Headings and text</h1>
+  <h2>Second level</h2>
+  <h3>Third level</h3>
+
+  <p class="narrow">
+    This paragraph is narrow, so it has to wrap across several lines. It
+    contains <b>bold</b>, <i>italic</i>, <b><i>bold italic</i></b>,
+    <a href="#">a link</a>, <u>underlined</u>, and <s>struck</s> text.
+  </p>
+
+  <p class="narrow centre">Centred text that wraps onto a second line.</p>
+  <p class="narrow right">Right-aligned text that also wraps around.</p>
+  <p class="narrow justify">Justified text spreads the words of every line
+    except the last so both edges are flush with the container.</p>
+
+  <p class="narrow nowrap">This line does not wrap even though it is far too long.</p>
+  <p class="pre-line">pre-line keeps
+    line breaks but
+    collapses     spaces.</p>
+
+  <p>A line<br>break and a <span class="big">big span</span> in a line.</p>
+  <p>Averyveryverylongwordthatcannotbebrokenanywhereandsomustoverflowitscontainer.</p>
+
+  <pre>
+fn main() {
+    println!("pre keeps    spaces");
+}
+</pre>
+  <p class="mono">monospace: iiii WWWW</p>
+
+  <ul>
+    <li>First item</li>
+    <li>Second item with <em>emphasis</em>
+      <ul>
+        <li>Nested item</li>
+      </ul>
+    </li>
+  </ul>
+</body>
+</html>

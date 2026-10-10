@@ -1,0 +1,315 @@
+#data
+<div><span>a<b>b
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <div>
+|       <span>
+|         "a"
+|         <b>
+|           "b"
+
+#data
+<div>a</span>b</div>c
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <div>
+|       "ab"
+|     "c"
+
+#data
+<p><b>bold<i>both</b>italic</i></p>
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <p>
+|       <b>
+|         "bold"
+|         <i>
+|           "both"
+|       <i>
+|         "italic"
+
+#data
+<b>1<p>2</b>3</p>
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <b>
+|       "1"
+|     <p>
+|       <b>
+|         "2"
+|       "3"
+
+#data
+<p>one<p>two</p>three</p>
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <p>
+|       "one"
+|     <p>
+|       "two"
+|     "three"
+|     <p>
+
+#data
+<ul><li>a<li>b<ul><li>c</ul><li>d</ul>
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <ul>
+|       <li>
+|         "a"
+|       <li>
+|         "b"
+|         <ul>
+|           <li>
+|             "c"
+|       <li>
+|         "d"
+
+#data
+<h1>One<h2>Two</h2>
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <h1>
+|       "One"
+|     <h2>
+|       "Two"
+
+#data
+<a href=1>one<a href=2>two</a>
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <a>
+|       href="1"
+|       "one"
+|     <a>
+|       href="2"
+|       "two"
+
+#data
+<p>a < b &amp;&amp; c <> d </> e <?php x ?> f</p>
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <p>
+|       "a < b && c <> d  e "
+|       <!-- ?php x ? -->
+|       " f"
+
+#data
+<custom-tag foo=bar"baz><inner/>text</custom-tag>
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <custom-tag>
+|       foo="bar"baz"
+|       <inner>
+|         "text"
+
+#data
+<DIV ID=a id=b CLASS=c>x</DIV>
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <div>
+|       class="c"
+|       id="a"
+|       "x"
+
+#data
+<p>text<!-- unterminated
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <p>
+|       "text"
+|       <!--  unterminated -->
+
+#data
+<p>text<a href="x
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <p>
+|       "text"
+
+#data
+<p>a</br>b</body>c
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <p>
+|       "a"
+|       <br>
+|       "bc"
+
+#data
+
+  <!doctype html>
+  <P>Hi
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <p>
+|       "Hi"
+
+#data
+<p><i>a<p>b
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <p>
+|       <i>
+|         "a"
+|     <p>
+|       <i>
+|         "b"
+
+#data
+<p>a</html>b
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <p>
+|       "ab"
+
+#data
+<body class=a><body class=b id=c>x
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     class="a"
+|     id="c"
+|     "x"
+
+#data
+<td>stray cell</td><tr>row<table><td>in table
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     "stray cellrow"
+|     <table>
+|       <tbody>
+|         <tr>
+|           <td>
+|             "in table"
+
+#data
+<b><b><b><b>x</b></b></b></b>y
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <b>
+|       <b>
+|         <b>
+|           <b>
+|             "x"
+|     "y"
+
+#data
+<head><p>a</p>
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <p>
+|       "a"
+
+#data
+</head></body></html>text
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     "text"
+
+#data
+<button>a<button>b</button>
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <button>
+|       "a"
+|     <button>
+|       "b"
+
+#data
+<object><template>x</template></object><template>y
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <object>
+|       <template>
+|         "x"
+|     <template>
+|       "y"
+
+#data
+<dl><dt>a<dd>b<dt>c</dl>
+#errors
+#document
+| <html>
+|   <head>
+|   <body>
+|     <dl>
+|       <dt>
+|         "a"
+|       <dd>
+|         "b"
+|       <dt>
+|         "c"
+

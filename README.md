@@ -22,17 +22,17 @@ Luma is mainly a learning project for Rust, systems programming, and browser int
 
 > In no particular order
 
--   [ ] HTML parser
--   [ ] DOM representation
--   [ ] CSS parser
--   [ ] Selector matching
--   [ ] Style tree
--   [ ] Block layout
--   [ ] Box model support
+-   [x] HTML parser
+-   [x] DOM representation
+-   [x] CSS parser
+-   [x] Selector matching
+-   [x] Style tree
+-   [x] Block layout
+-   [x] Box model support
 -   [ ] Text rendering
 -   [ ] Painting pipeline
 -   [ ] Window output
--   [ ] Local file loading
+-   [x] Local file loading
 -   [ ] Basic networking
 -   [ ] Browser UI
 -   [ ] Flexbox layout [^1]

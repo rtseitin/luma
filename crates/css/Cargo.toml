@@ -1,0 +1,12 @@
+[package]
+name = "luma-css"
+description = "CSS tokenizer, parser, and selector/value types for the Luma browser engine"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+
+[lints]
+workspace = true

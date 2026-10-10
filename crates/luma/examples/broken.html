@@ -1,0 +1,19 @@
+<!-- Deliberately malformed: every stage must recover and keep going. -->
+<html>
+<head>
+<title>Broken</title>
+<link rel="stylesheet" href="does-not-exist.css">
+<link rel="stylesheet" href="hello.css">
+<style>
+  p { color: red; colour: blue; width: banana; }
+  @unknown-rule { whatever }
+  div > > p { color: green }
+  .ok { color: #00aa00; margin: 10px
+</style>
+<body>
+<p>Unclosed paragraph
+<p>Another <b>bold <i>misnested</b> italic</i>
+<div class=ok>A div &amp; an &unknownentity; entity
+<table><tr><td>cell<td>another cell</table>
+<p>Stray end tag</span> and </div> here.
+<ul><li>one<li>two</ul>
